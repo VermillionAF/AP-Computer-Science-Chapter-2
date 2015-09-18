@@ -5,6 +5,7 @@
 // *************************************************************
 
 import java.util.Scanner;
+import java.text.DecimalFormat;
 
 public class Distance
 {
@@ -30,9 +31,8 @@ public class Distance
 	distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
 
 	// Print out the answer
-	
-	System.out.print("The distance between the points is ");
-	System.out.printf("%.3f", distance);
+	DecimalFormat fmt = new DecimalFormat("0.###");
+	System.out.print("The distance between the points is " + fmt.format(distance));
 	
     }
 }
